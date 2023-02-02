@@ -60,8 +60,8 @@ class ApplitoolsHelper extends Helper {
      *
      */
     async eyeCheck({ pageName, element, uniqueId, matchLevel }) {
-        const { playwrightEyes, webdriverEyes, puppeteerEyes } = require('./lib/Applitools');
-        const { eyes, Target } = `${_helper.toLowerCase()}Eyes`.call(this.config);
+        const { initEyes } = require('./lib/Applitools');
+        const { eyes, Target } = initEyes(_helper.toLowerCase(), this.config);
 
         if (uniqueId) {
             eyes.setBatch(pageName, uniqueId);
