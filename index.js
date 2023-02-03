@@ -53,11 +53,11 @@ class ApplitoolsHelper extends Helper {
 
 
     /**
-     * @param pageName {String} name of the page you want to check
-     * @param element {String} selector of the target element which will be used as area for screenshot
-     * @param uniqueId {String} provide a unique id to combine tests into a batch
-     * @param matchLevel {String} set the match level. Possible values: Exact, Strict, Content, Layout
-     *
+     * @param options {Object}
+     * @param options.pageName {String} name of the page you want to check
+     * @param options.element {String} selector of the target element which will be used as area for screenshot
+     * @param options.uniqueId {String} provide a unique id to combine tests into a batch
+     * @param options.matchLevel {String} set the match level. Possible values: Exact, Strict, Content, Layout
      */
     async eyeCheck({ pageName, element, uniqueId, matchLevel }) {
         const { initEyes } = require('./lib/Applitools');
